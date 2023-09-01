@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>July 27th, 2022 Birthday Wishlist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="liststyle.css">
+    <link rel="shortcut icon" href="globe.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+
+    <!--  start HTML Here -->
+
+    <!-- == div container to cover the two grids == -->
+    <div class="container-fluid">
+
+        <div class="row">
+            <!-- ! a grid to take 8/12 for the image and the input field -->
+            <div class="col-sm-4 didi" align="center" style="background-color: none;">
+                <img src="plugin-bundle.png" style="width: 60%" />
+
+                <!-- ! this box contains the header and the input field -->
+                <div id="myDIV" class="header">
+                    <h2 style="margin:5px">My 2023 Wishlist</h2>
+                    <input type="text" id="myInput" placeholder="Add a Wish Item">
+                    <span onclick="newElement()" class="addBtn">Add</span>
+                </div>
+            </div>
+            <!-- ! grid for image and input ends here -->
+
+            <!-- * this grid will contain the wish items -->
+            <div class="col-sm-8 didi" style="background-color:none;">
+                <ul id="myUL">
+                    <li class="checked">
+                        <!-- # this item by default is checked -->
+                        HTML, CSS, & JS
+                    </li>
+                    <li>Vanilla Js & Jquery</li>
+                    <li>Basic PHP</li>
+                    <li>Bootstrap</li>
+                    <li>Wordpress & E-commerce</li>
+                    <li>React JS</li>
+                    <!-- # other items will be added here from the add button -->
+                </ul>
+            </div>
+            <!-- * the item grid ends here -->
+
+        </div>
+    </div>
+    <!-- == div container ends here -->
+    <!-- page content ends here -->
+
+</body>
+<script src="listscript.js"></script>
+
+</html>
