@@ -10,9 +10,9 @@ import errorHandler from './middleware/error.js'; // Import the error handling m
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// * assign constant for port and express app
+// * assign constant for express app and port
 const app = express();
-const port = 8080;
+const port = 3000;
 
 
 // Use cors middleware for cross-origin requests
