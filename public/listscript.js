@@ -136,6 +136,31 @@ function handleNewTaskAddition(task) {
         });
 }
 
+// Function to add a new task to the backend
+function handleNewTaskAddition(task) {
+    const baseUrl = window.location.pathname.endsWith('/')
+        ? window.location.pathname
+        : window.location.pathname + '/'; // Ensure the trailing slash
+
+    const requestOptions = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ task })
+    };
+
+    fetch(baseUrl + 'api/todo', requestOptions)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+// Function to add a new task to the backend
 function handleTaskRemoval(task) {
     var taskElements = document.querySelectorAll('ul#myUL li');
     
@@ -151,7 +176,11 @@ function handleTaskRemoval(task) {
     const encodedTask = encodeURIComponent(task);
     console.log('Encoded task:', encodedTask); // Log the encoded task value
 
-    fetch('/api/todo/' + encodedTask, {
+    const baseUrl = window.location.pathname.endsWith('/')
+        ? window.location.pathname
+        : window.location.pathname + '/'; // Ensure the trailing slash
+
+    fetch(baseUrl + 'api/todo/' + encodedTask, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
