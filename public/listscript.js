@@ -176,9 +176,8 @@ function handleTaskRemoval(task) {
     const encodedTask = encodeURIComponent(task);
     console.log('Encoded task:', encodedTask); // Log the encoded task value
 
-    const baseUrl = window.location.pathname.endsWith('/')
-        ? window.location.pathname
-        : window.location.pathname + '/'; // Ensure the trailing slash
+    const baseUrl = '/.netlify/functions'; // Netlify serverless functions path
+
 
     fetch(baseUrl + 'api/todo/' + encodedTask, {
         method: 'DELETE',
